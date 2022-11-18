@@ -1,0 +1,138 @@
+/*
+     //PRIME NUMBER
+#include<stdio.h>
+int main()
+{
+	int i,num,count=0;
+	
+	printf("Enter the number : ");
+	scanf("%d", &num);
+	
+	for(i=1; i<=num; i++)
+	{
+		if(num % i == 0)
+			count++;
+	}
+	
+	if(count == 2)
+		printf("Prime Number");
+		
+	else
+	    printf("Not Prime Number");
+}
+
+------------------------------------------------------------
+     //PALINDROME
+#include<stdio.h>
+int main()
+{
+	int num,temp=0,rem,ans=0;
+	
+	printf("Enter the number : ");
+	scanf("%d", &num);
+	temp = num;
+	
+	while(num>0)
+	{
+		rem=num % 10;
+		ans = ans*10 +rem;
+		num/=10;
+	}
+	
+	if(temp == ans)
+		printf("Palindrome");
+	else
+		printf("Not Palindrome");
+}
+
+
+------------------------------------------------------------------
+       //ARMSTORANG
+#include<stdio.h>
+#include<math.h>
+int main()
+{
+	int num, temp=0,rem,count,ans=0;
+	
+	printf("Enter a number : ");
+	scanf("%d", &num);
+	
+	count = (num==1) ? 1 : log10(num)+1;
+     temp = num;
+    while(num>0)
+    {
+    	rem = num % 10;
+    	ans += pow(rem,count);
+    	num /= 10;
+	}
+	//printf("%d\n",ans);
+	
+	if(temp == ans)
+		printf("Armstorang");
+	else
+		printf("Not Armstorang");
+}
+
+---------------------------------------------------------------------------
+      //FACTOREIL 
+#include<stdio.h>
+int main()
+{
+	int num,i,fact=1;
+	
+	printf("Enter a number : ");
+	scanf("%d", &num);
+	
+	for(i=1; i<=num; i++)
+	{
+		fact *= i;
+	}
+	
+	printf("Factorial number : %u",fact);
+}
+
+------------------------------------------------------------------------------------
+    //FIBONACCI KE SERIES
+#include<stdio.h>
+int main()
+{
+    int a,b,c,i,num;
+	
+	printf("Enter the last number : ");
+	scanf("%d", &num);
+	a=0;
+	b=1;
+	printf("%d %d ",a,b);
+	
+	for(i=1; i<=num; i++)
+	{
+		c = a+b;
+		a=b;
+		b=c;
+		printf(" %d",c);
+	}	
+}
+
+-------------------------------------------------------------------------------------------
+       //PERFECT NUMBER
+#include<stdio.h>
+int main()
+{
+	int num,i,temp=0,sum=0;
+	
+	printf("Enter a number : ");
+	scanf("%d", &num);
+	temp = num;
+	for(i=1; i<num; i++)
+	{
+		if(num % i == 0)
+		     sum += i;
+	}
+	  
+	if(temp == sum)
+		printf("Perfect number");
+	else
+		printf("Not Perfect number");
+}
+
+-----------------------------------------------------------------------------------------------*/
